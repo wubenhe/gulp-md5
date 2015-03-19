@@ -1,0 +1,36 @@
+{
+  "name": "gulp-md5",
+  "version": "0.1.0",
+  "description": "add md5 to filename",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Raistlin916/gulp-md5.git"
+  },
+  "keywords": [
+    "gulp",
+    "gulp-md5"
+  ],
+  "dependencies": {
+    "gulp-util": "~2.2.14",
+    "through2": "^0.4.1"
+  },
+  "homepage": "https://github.com/Raistlin916/gulp-md5.git",
+  "author": {
+    "name": "gaok"
+  },
+  "license": "MIT",
+  "gitHead": "806678eb87d4217e88dbf9a398ba009992099109",
+  "readme": "# gulp-md5\n\n> md5 plugin for [gulp](https://github.com/wearefractal/gulp).\n\n## Usage\n\nFirst, install `gulp-md5` as a development dependency:\n\n```shell\nnpm install --save-dev gulp-md5\n```\n\nThen, add it to your `gulpfile.js`:\n\n```javascript\nvar md5 = require(\"gulp-md5\");\n\ngulp.src(\"./src/*.ext\")\n\t.pipe(md5({\n\t\tmsg: \"Hello Gulp!\"\n\t}))\n\t.pipe(gulp.dest(\"./dist\"));\n```\n\n## API\n\n### md5(size)\n\n#### size\nType: `String`  \nDefault: null\n\nOptionnal: you can pass the size to limit the size of the hash that is appended.\n\nExample:\n```javascript\n\tgulp.src('**/*', {\n        cwd: './src'\n    })\n        .pipe(md5())\n        .pipe(gulp.dest('./whatever'));\n```\n\nThe sample above will append the full md5 hash to each of the file matching src and store all of that into the *whatever* folder.\n\n```shell\nwhatever/\n├── index_a7ded4c00cdc9cdc47e55f6b85e3f909.html\n├── app_6b85e3f9096b85e3f9096b85e3f90943.js\n├── ...\n```\n\nIf you pass the size argument, the hash will be truncated to that value. For instance md5(10) will produce:\n\n```shell\nwhatever/\n├── index_a7ded4c00c.html\n├── app_6b85e3f909.js\n├── ...\n```\n\n## License\n\nhttp://en.wikipedia.org/wiki/MIT_License[MIT License]\n\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/Raistlin916/gulp-md5/issues"
+  },
+  "_id": "gulp-md5@0.1.0",
+  "_shasum": "ec57da5127828d1b7328207165935118c59920c7",
+  "_from": "../../../../tmp/npm-5321-71916a1b/git-cache-278051cc24c5/806678eb87d4217e88dbf9a398ba009992099109",
+  "_resolved": "git+https://git@github.com/Raistlin916/gulp-md5.git#806678eb87d4217e88dbf9a398ba009992099109"
+}
