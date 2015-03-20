@@ -40,7 +40,7 @@ module.exports = function(options) {
       var fs = require('fs');
       var target = filename.split('.').map(function(item, i, arr) {
         return i == arr.length - 2 ? item + separator + '[a-zA-Z0-9]+' : item;
-      }).join('.').replace('.', '\\.');
+      }).join('.').replace(/\./g, '\\.');
 
       fs.readFile(index, 'utf8', function (err,data) {
         if (err) {
