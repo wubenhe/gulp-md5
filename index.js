@@ -46,7 +46,7 @@ module.exports = function(options) {
         if (err) {
           return console.log(err);
         }
-        data = data.replace( new RegExp(target), newfilename);
+        data = data.replace( new RegExp(target, 'g'), newfilename);
         fs.writeFile(index,data);
       });
     }
