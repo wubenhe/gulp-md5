@@ -6,12 +6,14 @@ var path = require('path')
 module.exports = function(options) {
   var separator = '_',
     size = options,
-    index = '';
+    index = '', 
+    writeto = '';
 
   if (typeof options === 'object') {
     separator = options.separator || '_';
     index = options.index || '';
-    size = options.size | 0;
+    size = options.size | 0, 
+    writeto = options.writeto || '';
   }
 
   return through.obj(function(file, enc, cb) {
